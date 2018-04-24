@@ -1,0 +1,65 @@
+$white: #fff;
+$text-color: #333;
+$text-size: 14px;
+$icon-size: 18px;
+$icon-color: #777;
+$default-border: 1px solid #e6ecf5;
+@mixin transition($second) 
+{
+    transition: all $second ease;
+    -webkit-transition: all $second ease;
+    -moz-transition: all $second ease;
+    -o-transition: all $second ease;
+    -ms-transition: all $second ease;
+}
+
+.side-nav 
+{
+    width: 70px;
+    background-color: $white;
+    z-index: 1000;
+    top: 0px;
+    bottom: 0px;
+    position: fixed;
+    overflow: hidden;
+    border-right: $default-border;
+    padding: 10px 15px; 
+    @include transition(0.2s);
+
+    .side-nav-logo
+    {
+        height: 50px;
+        img 
+        {
+            width: 25px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+    }
+    .side-nav-menu
+    {
+        padding: 0px;
+        margin-top: 30px;
+        text-align: center;
+        li 
+        {
+            a 
+            {
+                color: $icon-color;
+                font-size: $icon-size;
+                text-decoration: none;
+                padding: 15px 0px;
+                display: inline-block;
+                width: 100%;
+            }
+        }
+        li.active 
+        {
+            a 
+            {
+                color: #0f9aee;
+            }
+        }
+    }
+}
+

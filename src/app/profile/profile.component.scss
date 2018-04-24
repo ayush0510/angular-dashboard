@@ -1,0 +1,19 @@
+.widget-profile
+{ 
+    .profile 
+    {
+        text-align: center;
+        padding: 10px 20px;
+        img 
+        {
+            max-height: 120px;
+            max-width: 120px;
+            border-radius: 50%;
+        }
+    }
+}
+.btn-default
+{
+    display: block;
+    font-size: 13px;
+}

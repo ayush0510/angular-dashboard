@@ -1,0 +1,24 @@
+$white: #fff;
+$font-color: #333;
+$font-size: 14px;
+$default-border: 1px solid #e6ecf5;
+@mixin transition($second) 
+{
+    transition: all $second ease;
+    -webkit-transition: all $second ease;
+    -moz-transition: all $second ease;
+    -o-transition: all $second ease;
+    -ms-transition: all $second ease;
+}
+
+.page-container
+{ 
+    padding-left: 70px;
+    min-height: 100vh;
+    @include transition(0.2s);
+    .main-content 
+    {
+        padding: 95px 15px 15px 15px;
+        min-height: calc(100vh - 60px);
+    }
+}

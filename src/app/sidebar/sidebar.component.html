@@ -1,0 +1,19 @@
+<div class="side-nav" sidebar="">
+    <div class="side-nav-inner">
+        <div class="side-nav-logo">
+            <a routerLink="">
+                <img src="assets/images/logo/logo.png">
+            </a>
+        </div>
+        <ul class="side-nav-menu scrollable">
+            <li class="nav-item" *ngFor="let sidebar of _sidebar" routerLinkActive="active" routerLinkActiveOptions="{exact:true}">
+                <a class="" routerLink="{{sidebar.url}}">
+                    <span class="icon-holder">
+                        <i [ngClass]="sidebar.icon"></i>
+                    </span>
+                    <span class="title"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
